@@ -1,0 +1,340 @@
+/* ==========================================================
+   NEGRETEART STUDIO - LAYOUT
+========================================================== */
+
+/* ---------- TOPBAR ---------- */
+
+#topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 15px;
+
+    background:var(--panel);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:1000;
+
+    box-shadow:var(--shadow);
+
+}
+
+#logo{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:var(--primary);
+
+}
+
+#toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+#toolbar button{
+
+    padding:10px 16px;
+
+}
+
+/* ---------- WORKSPACE ---------- */
+
+#workspace{
+
+    position:fixed;
+
+    top:60px;
+
+    bottom:35px;
+
+    left:0;
+
+    right:0;
+
+    display:flex;
+
+}
+
+/* ---------- PANEL IZQUIERDO ---------- */
+
+#leftPanel{
+
+    width:250px;
+
+    background:var(--panel);
+
+    border-right:1px solid var(--border);
+
+    overflow:auto;
+
+    padding:15px;
+
+}
+
+/* ---------- VISOR ---------- */
+
+#viewport{
+
+    flex:1;
+
+    position:relative;
+
+    background:#111;
+
+}
+
+#renderCanvas{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    touch-action:none;
+
+}
+
+/* ---------- PANEL DERECHO ---------- */
+
+#rightPanel{
+
+    width:300px;
+
+    background:var(--panel);
+
+    border-left:1px solid var(--border);
+
+    overflow:auto;
+
+    padding:15px;
+
+}
+
+/* ---------- TITULOS ---------- */
+
+#leftPanel h2,
+#rightPanel h2{
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+/* ---------- BOTONES ---------- */
+
+#leftPanel button{
+
+    width:100%;
+
+    margin-bottom:8px;
+
+    padding:12px;
+
+}
+
+/* ---------- INSPECTOR ---------- */
+
+.panelSection{
+
+    margin-bottom:18px;
+
+}
+
+.panelSection label{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--text2);
+
+}
+
+.panelSection input{
+
+    width:100%;
+
+}
+
+/* ---------- STATUS ---------- */
+
+#statusbar{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:35px;
+
+    background:var(--panel);
+
+    border-top:1px solid var(--border);
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    font-size:13px;
+
+}
+
+/* ---------- EXPLORADOR ---------- */
+
+#sceneList{
+
+    margin-top:15px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    overflow:auto;
+
+    max-height:260px;
+
+}
+
+.scene-item{
+
+    padding:10px;
+
+    border-bottom:1px solid var(--border);
+
+    cursor:pointer;
+
+}
+
+.scene-item:hover{
+
+    background:#323232;
+
+}
+
+.scene-item.selected{
+
+    background:var(--primary);
+
+}
+
+
+
+
+#assetsList{
+
+    margin-top:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    max-height:220px;
+
+    overflow:auto;
+
+}
+
+.asset-item{
+
+    padding:10px;
+
+    border-bottom:1px solid var(--border);
+
+    cursor:pointer;
+
+}
+
+.asset-item:hover{
+
+    background:#303030;
+
+}
+
+
+#hierarchyList{
+
+    margin-top:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    max-height:220px;
+
+    overflow:auto;
+
+}
+
+
+#materialList{
+
+    margin-top:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    max-height:220px;
+
+    overflow:auto;
+
+}
+
+
+
+#textureList{
+
+    margin-top:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    max-height:220px;
+
+    overflow:auto;
+
+}
+
+
+#layerList{
+
+    margin-top:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    max-height:180px;
+
+    overflow:auto;
+
+}
+
+

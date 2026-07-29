@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NegreteArt</string>
+    <string name="title_activity_main">NegreteArt</string>
+    <string name="package_name">com.negreteart.app</string>
+    <string name="custom_url_scheme">com.negreteart.app</string>
+</resources>

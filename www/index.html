@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#2ea8ff">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="apple-mobile-web-app-title" content="NegreteArt Studio">
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>NegreteArt Studio</title>
+
+<!-- Babylon.js -->
+
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
+
+<script src="https://cdn.babylonjs.com/materialsLibrary/babylon.gridMaterial.min.js"></script>
+
+<script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+<script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+
+<script src="https://cdn.babylonjs.com/gizmos/babylon.gizmo.js"></script>
+
+<link rel="stylesheet"
+href="negreteart-studio.css">
+
+
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="studio.css">
+<link rel="stylesheet" href="mobile.css">
+<link rel="stylesheet" href="tablet.css">
+<link rel="stylesheet" href="desktop.css">
+
+
+
+
+</head>
+
+<body>
+
+<!-- ======================================
+TOPBAR
+======================================= -->
+
+<header id="topbar">
+    
+    
+    <button id="btnLeftPanel">☰</button>
+
+<div id="logo">
+
+NegreteArt Studio
+
+</div>
+
+<div id="toolbar">
+
+<button id="btnNew">
+
+Nuevo
+
+</button>
+
+<button id="btnOpen">
+
+Abrir
+
+</button>
+
+<button id="btnSave">Guardar</button>
+
+
+<button id="btnInstall" style="display:none;">
+📲 Instalar App
+</button>
+
+
+<button id="btnExport">Exportar</button>
+
+<button id="viewFront">Frente</button>
+
+<button id="viewTop">Superior</button>
+
+<button id="viewIso">Isométrica</button>
+
+<button id="viewFocus">Enfocar</button>
+
+<button id="viewReset">Inicio</button>
+
+
+
+<button id="btnUndo">↶ Deshacer</button>
+
+<button id="btnRedo">↷ Rehacer</button>
+
+
+<button id="btnImport">Importar</button>
+
+<input
+    type="file"
+    id="modelInput"
+    accept=".glb,.gltf,.obj"
+    style="display:none">
+    
+    
+    <button id="btnRightPanel">⚙️</button>
+
+</div>
+
+
+
+
+</header>
+
+<!-- ======================================
+ESPACIO DE TRABAJO
+======================================= -->
+
+<div id="workspace">
+    
+    
+    <div id="overlay"></div>
+    
+
+<!-- PANEL IZQUIERDO -->
+
+<aside id="leftPanel">
+
+<h2>Crear</h2>
+
+
+<button id="createCone">🔺 Cono</button>
+
+<button id="createTorus">🍩 Toro</button>
+
+<button id="createCapsule">💊 Cápsula</button>
+
+<button id="createGround">🟫 Terreno</button>
+
+
+<button id="createCube">🧊 Cubo</button>
+
+<button id="createSphere">⚪ Esfera</button>
+
+<button id="createCylinder">🥫 Cilindro
+</button>
+
+<button id="createPlane">⬜ Plano</button>
+
+
+<h2>Assets</h2>
+
+<div id="assetsList"></div>
+
+<hr>
+
+<h2>Transformar</h2>
+
+<button id="toolMove">
+
+Mover
+
+</button>
+
+<button id="toolRotate">
+
+Rotar
+
+</button>
+
+<button id="toolScale">
+
+Escalar
+
+</button>
+
+<hr>
+
+<h2>Esculpido</h2>
+
+<hr>
+
+<h2>Editar</h2>
+
+
+<hr>
+
+<h2>Materiales</h2>
+
+<button id="matPlastic">🟦 Plástico</button>
+
+<button id="matMetal">⚙️ Metal</button>
+
+<button id="matGold">🟨 Oro</button>
+
+<button id="matGlass">💎 Vidrio</button>
+
+<button id="matWood">🪵 Madera</button>
+
+<button id="matStone">🪨 Piedra</button>
+
+
+<hr>
+
+<h2>Biblioteca</h2>
+
+<div id="materialList"></div>
+
+<button id="btnDuplicate">
+📄 Duplicar
+</button>
+
+<button id="btnDelete">
+🗑 Eliminar
+</button>
+
+<button id="btnColor">
+🎨 Color
+</button>
+
+<button id="btnVisibility">
+👁 Mostrar / Ocultar
+</button>
+
+<button id="btnLock">
+🔒 Bloquear
+</button>
+
+
+<hr>
+
+<h2>Texturas</h2>
+
+<button id="btnTexture">
+
+🖼 Cargar textura
+
+</button>
+
+<input
+type="file"
+id="textureInput"
+accept=".png,.jpg,.jpeg"
+style="display:none">
+
+<div id="textureList"></div>
+
+
+
+<hr>
+
+<h2>Capas</h2>
+
+<button id="btnNewLayer">
+➕ Nueva capa
+</button>
+
+<button id="btnLayerVisible">
+👁 Mostrar / Ocultar
+</button>
+
+<button id="btnLayerLock">
+🔒 Bloquear
+</button>
+
+<div id="layerList"></div>
+
+
+<button id="toolInflate">
+
+Inflar
+
+</button>
+
+<button id="toolSmooth">
+
+Suavizar
+
+</button>
+
+<button id="toolFlatten">
+
+Aplanar
+
+</button>
+
+</aside>
+
+<!-- VISOR -->
+
+<main id="viewport">
+
+<canvas id="renderCanvas"></canvas>
+
+</main>
+
+<!-- PANEL DERECHO -->
+
+<aside id="rightPanel">
+
+<h2>Inspector</h2>
+
+
+<hr>
+
+<h2>Escena</h2>
+
+
+<hr>
+
+<h2>Jerarquía</h2>
+
+<div id="hierarchyList"></div>
+
+
+<div id="sceneList"></div>
+
+
+<div class="panelSection">
+
+<label>
+
+Objeto
+
+</label>
+
+<input
+id="objectName"
+type="text"
+readonly>
+
+</div>
+
+<div class="panelSection">
+
+<label>
+
+Posición X
+
+</label>
+
+<input id="posX"
+type="number">
+
+<label>
+
+Posición Y
+
+</label>
+
+<input id="posY"
+type="number">
+
+<label>
+
+Posición Z
+
+</label>
+
+<input id="posZ"
+type="number">
+
+</div>
+
+<div class="panelSection">
+
+<label>
+
+Rotación X
+
+</label>
+
+<input id="rotX"
+type="number">
+
+<label>
+
+Rotación Y
+
+</label>
+
+<input id="rotY"
+type="number">
+
+<label>
+
+Rotación Z
+
+</label>
+
+<input id="rotZ"
+type="number">
+
+</div>
+
+<div class="panelSection">
+
+<label>
+
+Escala
+
+</label>
+
+<input id="scale"
+type="number"
+value="1">
+
+</div>
+
+</aside>
+
+</div>
+
+<!-- ======================================
+BARRA DE ESTADO
+======================================= -->
+
+<footer id="statusbar">
+
+<div id="fps">
+
+FPS : 0
+
+</div>
+
+<div id="vertices">
+
+Vértices : 0
+
+</div>
+
+<div id="triangles">
+
+Triángulos : 0
+
+</div>
+
+<div id="objects">
+
+Objetos : 0
+
+</div>
+
+</footer>
+
+<!-- MOTOR -->
+
+
+
+
+<script src="selection.js"></script>
+<script src="scene.js"></script>
+<script src="camera.js"></script>
+<script src="lights.js"></script>
+<script src="grid.js"></script>
+<script src="gizmos.js"></script>
+<script src="primitives.js"></script>
+<script src="materials.js"></script>
+<script src="inspector.js"></script>
+<script src="explorer.js"></script>
+<script src="history.js"></script>
+<script src="import.js"></script>
+<script src="export.js"></script>
+<script src="sculpt.js"></script>
+<script src="mobile-ui.js"></script>
+<script src="assets.js"></script>
+<script src="material-editor.js"></script>
+<script src="layers.js"></script>
+<script src="ui.js"></script>
+<script src="project.js"></script>
+<script src="stats.js"></script>
+<script src="install.js"></script>
+<script src="engine.js"></script>
+
+
+
+
+</body>
+
+</html>

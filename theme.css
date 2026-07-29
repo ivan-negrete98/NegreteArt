@@ -1,0 +1,167 @@
+/* ==========================================================
+   NEGRETEART STUDIO THEME v1.0
+========================================================== */
+
+:root{
+
+    --bg:#151515;
+    --bg2:#1d1d1d;
+    --panel:#222222;
+    --panel2:#2c2c2c;
+
+    --primary:#2ea8ff;
+    --primaryHover:#0f8df1;
+
+    --text:#ffffff;
+    --text2:#b8b8b8;
+
+    --border:#383838;
+
+    --success:#31c76a;
+    --warning:#ffb400;
+    --danger:#ff4a4a;
+
+    --radius:12px;
+
+    --shadow:0 8px 30px rgba(0,0,0,.35);
+
+    --transition:.25s;
+}
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+/* Botones */
+
+button{
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:var(--panel2);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+button:hover{
+
+    background:var(--primary);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* Inputs */
+
+input{
+
+    background:#303030;
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    padding:10px;
+
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#555;
+
+    border-radius:20px;
+
+}
+
+#toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    white-space:nowrap;
+
+    flex:1;
+
+    margin-left:15px;
+
+}
+
+#toolbar::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+#toolbar button{
+
+    flex:0 0 auto;
+    
+}
+
+
+#btnInstall{
+
+    background:#2ea8ff;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+#btnInstall:hover{
+
+    background:#0d8df0;
+
+}

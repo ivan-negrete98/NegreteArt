@@ -1,0 +1,123 @@
+/* ==========================================================
+   NEGRETEART STUDIO TABLET v1.0
+========================================================== */
+
+@media (min-width:901px) and (max-width:1200px){
+
+/* ==========================
+TOPBAR
+========================== */
+
+#topbar{
+
+    height:65px;
+
+    padding:0 15px;
+
+}
+
+#logo{
+
+    font-size:20px;
+
+}
+
+#toolbar{
+
+    gap:8px;
+
+}
+
+#toolbar button{
+
+    padding:10px 14px;
+
+    font-size:14px;
+
+}
+
+/* ==========================
+WORKSPACE
+========================== */
+
+#workspace{
+
+    top:65px;
+
+    bottom:35px;
+
+}
+
+/* ==========================
+PANEL IZQUIERDO
+========================== */
+
+#leftPanel{
+
+    width:210px;
+
+    overflow-y:auto;
+
+}
+
+/* ==========================
+VISOR
+========================== */
+
+#viewport{
+
+    flex:1;
+
+}
+
+/* ==========================
+PANEL DERECHO
+========================== */
+
+#rightPanel{
+
+    width:250px;
+
+    overflow-y:auto;
+
+}
+
+/* ==========================
+BOTONES
+========================== */
+
+#leftPanel button{
+
+    padding:12px;
+
+    font-size:14px;
+
+}
+
+/* ==========================
+INSPECTOR
+========================== */
+
+.panelSection{
+
+    margin-bottom:15px;
+
+}
+
+.panelSection input{
+
+    font-size:14px;
+
+}
+
+/* ==========================
+STATUS
+========================== */
+
+#statusbar{
+
+    font-size:12px;
+
+}
+
+}

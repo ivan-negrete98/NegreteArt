@@ -1,0 +1,154 @@
+/* ==========================================================
+   NEGRETEART STUDIO DESKTOP v1.0
+========================================================== */
+
+@media (min-width:1201px){
+
+/* ==========================
+TOPBAR
+========================== */
+
+#topbar{
+
+    height:60px;
+
+    padding:0 20px;
+
+}
+
+#logo{
+
+    font-size:24px;
+
+}
+
+#toolbar{
+
+    gap:10px;
+
+}
+
+#toolbar button{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+}
+
+/* ==========================
+WORKSPACE
+========================== */
+
+#workspace{
+
+    top:60px;
+
+    bottom:35px;
+
+}
+
+/* ==========================
+LEFT PANEL
+========================== */
+
+#leftPanel{
+
+    width:260px;
+
+    min-width:220px;
+
+    resize:horizontal;
+
+    overflow:auto;
+
+}
+
+/* ==========================
+RIGHT PANEL
+========================== */
+
+#rightPanel{
+
+    width:300px;
+
+    min-width:260px;
+
+    resize:horizontal;
+
+    overflow:auto;
+
+}
+
+/* ==========================
+VIEWPORT
+========================== */
+
+#viewport{
+
+    flex:1;
+
+    position:relative;
+
+}
+
+/* ==========================
+BOTONES
+========================== */
+
+button{
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ==========================
+PANELES
+========================== */
+
+#leftPanel,
+#rightPanel{
+
+    box-shadow:0 0 18px rgba(0,0,0,.35);
+
+}
+
+/* ==========================
+SCENE EXPLORER
+========================== */
+
+.scene-item{
+
+    transition:.2s;
+
+}
+
+.scene-item:hover{
+
+    padding-left:18px;
+
+}
+
+/* ==========================
+STATUS
+========================== */
+
+#statusbar{
+
+    font-size:13px;
+
+}
+
+}
