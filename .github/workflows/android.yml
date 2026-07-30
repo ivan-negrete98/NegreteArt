@@ -23,8 +23,13 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
+
           node-version: 22
           cache: npm
+
+          node-version: "22"
+          cache: "npm"
+
 
       - name: Instalar dependencias
         run: npm install
@@ -36,9 +41,8 @@ jobs:
         run: chmod +x android/gradlew
 
       - name: Compilar APK
-        run: |
-          cd android
-          ./gradlew assembleDebug
+        working-directory: android
+        run: ./gradlew assembleDebug
 
       - name: Subir APK
         uses: actions/upload-artifact@v4
