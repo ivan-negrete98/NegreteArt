@@ -21,9 +21,10 @@ jobs:
           java-version: "21"
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+  uses: actions/setup-node@v4
+  with:
+    node-version: 22
+    cache: npm
 
       - name: Instalar dependencias
         run: npm install
